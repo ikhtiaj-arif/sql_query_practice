@@ -100,4 +100,14 @@ FROM
     matches
 WHERE
     tournament_category = 'Champions League'
-    AND match_status = 'Available'
+    AND match_status = 'Available';
+
+
+-- Query 2: Search for all users whose full names start with 'Tanvir' or contain the phrase 'Haque' (case-insensitive).
+SELECT * from users 
+WHERE full_name ILIKE 'Tanvir%'
+  OR full_name ILIKE '%Haque';
+
+
+
+
