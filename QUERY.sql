@@ -49,7 +49,7 @@ CREATE TABLE Bookings (
     user_id int REFERENCES users (user_id),
     match_id int REFERENCES matches (match_id),
     seat_number varchar(20),
-    payment_status varchar(20) CHECK (payment_status IN ('Confirmed', 'Pending')),
+    payment_status varchar(20) CHECK (payment_status IN ('Confirmed', 'Pending', 'Refunded', 'Cancelled')),
     total_cost decimal(10, 2) NOT NULL CHECK (total_cost >= 0)
     -- Write your constraint to make 'booking_id' the Primary Key
     -- Write your Foreign Key constraint linking 'user_id' to the Users table
