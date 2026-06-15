@@ -34,7 +34,7 @@ CREATE TABLE Matches (
     tournament_category varchar(200),
     base_ticket_price decimal(10, 2) NOT NULL CHECK (base_ticket_price >= 0),
     match_status varchar(20) NOT NULL CHECK (
-        match_status IN ('Available', 'Selling Fast', 'Sold Out')
+        match_status IN ('Available', 'Selling Fast', 'Sold Out', 'Postponed')
     )
     -- Write your constraint to make 'match_id' the Primary Key
     -- Write your check constraint to prevent negative ticket prices
